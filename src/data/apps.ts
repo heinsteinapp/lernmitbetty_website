@@ -18,7 +18,7 @@ export interface AppItem {
 
 export const CONTACT_EMAIL = "heinstein.app@gmail.com";
 export const ADMOB_PUBLISHER_ID = "pub-9091345489987614";
-export const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+export const WEB3FORMS_ACCESS_KEY = "8f4667d9-219d-4487-984d-9af4bfcdb3b0";
 export const MAX_DAILY_FEEDBACK = 5;
 export const FEEDBACK_COOLDOWN_SECONDS = 60;
 
