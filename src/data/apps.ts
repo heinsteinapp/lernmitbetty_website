@@ -1,0 +1,121 @@
+export interface AppItem {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  targetAge: string;
+  category: string;
+  icon: string;
+  highlights: string[];
+  gradient: string;
+  badgeBg: string;
+  playStoreUrl: string;
+  packageName: string;
+  isAvailable: boolean;
+}
+
+export const APPS: AppItem[] = [
+  {
+    id: "fokus-mit-betty",
+    name: "Fokus mit Betty",
+    tagline: "Konzentration, Achtsamkeit & Schulte-Tische",
+    description: "Steigert spielerisch die Aufmerksamkeitsspanne und das Sehfeld von Kindern durch wissenschaftlich fundierte Schulte-Tische, Gorbov-Rot-Schwarz-Tabellen und geführte Betty-Atempausen.",
+    targetAge: "Ab 6 Jahren",
+    category: "Konzentration & Fokus",
+    icon: "/images/apps/fokus_mit_betty.png",
+    highlights: [
+      "Schulte-Zahlentische (3×3 bis 7×7) zur Blickspanne-Erweiterung",
+      "Gorbov Rot-Schwarz-Tabellen für höchste Konzentrationsdisziplin",
+      "Geführte Atem- und Entspannungsphasen mit Betty",
+      "100 % werbe- und ablenkungsfreie Übungseinheiten"
+    ],
+    gradient: "from-teal-500 to-emerald-600",
+    badgeBg: "bg-teal-50 text-teal-800 border-teal-200",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.fokusmitbetty",
+    packageName: "com.heinstein.fokusmitbetty",
+    isAvailable: true
+  },
+  {
+    id: "rechnen-mit-betty",
+    name: "Rechne mit Betty",
+    tagline: "Spielerisches Kopfrechnen & Mathe-Abenteuer",
+    description: "Macht Zahlen zu echten Freunden! Ob Plus, Minus, Malnehmen oder Geteilt: Zusammen mit Hündin Betty trainieren Kinder Kopfrechnen und bauen spielerisch Selbstvertrauen in Mathematik auf.",
+    targetAge: "Vorschule & Grundschule",
+    category: "Mathematik & Logik",
+    icon: "/images/apps/rechnen_mit_betty.png",
+    highlights: [
+      "Alle 4 Grundrechenarten (+, −, ×, ÷) didaktisch aufgebaut",
+      "Zahlenräume 10, 20, 100 und 1000 frei wählbar",
+      "Motivierendes Knochen-Sammelsystem & Streaks",
+      "Sofortiges, kindgerechtes und ermutigendes Feedback"
+    ],
+    gradient: "from-orange-500 to-amber-600",
+    badgeBg: "bg-orange-50 text-orange-800 border-orange-200",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.rechnemitbetty",
+    packageName: "com.heinstein.rechnemitbetty",
+    isAvailable: true
+  },
+  {
+    id: "englisch-mit-betty",
+    name: "Englisch mit Betty",
+    tagline: "Vokabeltrainer & spielerische Spracherkundung",
+    description: "Der ideale und angstfreie Einstieg in die englische Sprache. Mit liebevollen Illustrationen, kindgerechter Audio-Aussprache und abwechslungsreichen Mini-Rätseln.",
+    targetAge: "Grundschule (ab 6 Jahren)",
+    category: "Sprachen lernen",
+    icon: "/images/apps/englisch_mit_betty.png",
+    highlights: [
+      "Kindgerechte Themenwelten: Tiere, Farben, Zahlen & Schule",
+      "Klare, muttersprachliche Audio-Ausgabe für jedes Wort",
+      "Wiederholungs-Logik für nachhaltiges Vokabel-Behalten",
+      "Entspanntes Lernen im eigenen Lerntempo ohne Zeitdruck"
+    ],
+    gradient: "from-sky-500 to-blue-600",
+    badgeBg: "bg-sky-50 text-sky-800 border-sky-200",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.englischmitbetty",
+    packageName: "com.heinstein.englischmitbetty",
+    isAvailable: true
+  },
+  {
+    id: "betty-slice",
+    name: "Betty's Slice",
+    tagline: "Reaktions- & Geschicklichkeitsspiel mit Pfoten-Action",
+    description: "Flinke Pfoten gefragt! Ein rasantes, gewaltfreies Geschicklichkeitsspiel für die ganze Familie. Verbessert die Hand-Auge-Koordination mit viel Witz und guter Laune.",
+    targetAge: "Für die ganze Familie (ab 4 Jahren)",
+    category: "Geschicklichkeit & Spiel",
+    icon: "/images/apps/betty_slice.png",
+    highlights: [
+      "Intuitive Touch- & Wisch-Steuerung für flinke Reflexe",
+      "Fröhliche, 100 % gewaltfreie Spielatmosphäre",
+      "Gemeinsamer Familienspaß & Highscore-Jagd",
+      "Keine lästigen Paywalls oder unfaire In-App-Käufe"
+    ],
+    gradient: "from-amber-500 to-rose-500",
+    badgeBg: "bg-amber-50 text-amber-800 border-amber-200",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.bettyslice",
+    packageName: "com.heinstein.bettyslice",
+    isAvailable: true
+  }
+];
+
+export const SAFETY_POINTS = [
+  {
+    icon: "shield",
+    title: "100 % On-Device & Offline",
+    description: "Alle Lernfortschritte, Punktestände und Profile bleiben lokal auf dem Gerät. Es finden keinerlei Datentransfers in die Cloud statt."
+  },
+  {
+    icon: "baby",
+    title: "Google Play Familienprogramm & COPPA",
+    description: "Entwickelt nach den strengsten Google Play Familienschutz-Richtlinien. Keine personalisierte Werbung, kein Werbe-ID-Tracking, Rating G."
+  },
+  {
+    icon: "sparkles",
+    title: "Pädagogisch wertvoll",
+    description: "Konzipiert, um Selbstvertrauen, Neugier und Konzentration zu stärken – ohne Überreizung, laute Schockeffekte oder unfairen Druck."
+  },
+  {
+    icon: "heart",
+    title: "Mit Liebe gestaltet",
+    description: "Warmes Aquarell-Design, kindgerechte Typografie und Hündin Betty als treue, ermutigende Lernbegleiterin."
+  }
+];

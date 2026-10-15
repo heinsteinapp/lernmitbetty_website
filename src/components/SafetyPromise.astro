@@ -1,0 +1,139 @@
+---
+import { SAFETY_POINTS } from '../data/apps';
+---
+
+<section id="safety" class="py-16 sm:py-24 bg-white border-y border-[#58CBBF]/20 scroll-mt-20">
+  <div id="parents" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+      
+      <!-- Text introduction -->
+      <div class="lg:col-span-8 space-y-4">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FDD5B4]/60 border border-[#E8935C]/30 text-xs font-bold text-[#E8935C]">
+          <span>🛡️</span>
+          <span>Für Eltern & Erziehende</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1A3533] tracking-tight" style="font-family: var(--font-heading);">
+          Das Betty-Sicherheitsversprechen:<br />
+          <span class="text-[#00897B]">Lernen ohne Risiko.</span>
+        </h2>
+        <p class="text-base text-[#4B6E6A] leading-relaxed max-w-2xl">
+          Als Eltern möchten wir genau wissen, was auf den Bildschirmen unserer Kinder geschieht. Deshalb haben wir für alle Betty-Apps von Grund auf strenge Sicherheits- und Datenschutzprinzipien fest verankert.
+        </p>
+      </div>
+
+      <!-- Mascot Praise Image Badge -->
+      <div class="lg:col-span-4 flex justify-center lg:justify-end">
+        <div class="relative w-48 sm:w-56 aspect-square rounded-3xl bg-[#F0FCFB] p-4 border-2 border-[#58CBBF]/30 shadow-md flex items-center justify-center">
+          <img 
+            src="/images/mascot/betty_praise.png" 
+            alt="Betty lobt dein Kind" 
+            class="w-full h-auto object-contain max-h-[90%]"
+            loading="lazy"
+          />
+          <div class="absolute -bottom-3 bg-[#43A047] text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+            ✓ 100% Kindersicher
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 4 Key Safety Pillar Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Pillar 1 -->
+      <div class="rounded-3xl bg-[#F0FCFB]/70 border border-[#58CBBF]/20 p-6 flex flex-col justify-between hover:bg-[#F0FCFB] transition-colors">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-white border border-[#58CBBF]/30 flex items-center justify-center text-2xl mb-4 shadow-2xs">
+            📱
+          </div>
+          <h3 class="text-lg font-bold text-[#1A3533] mb-2" style="font-family: var(--font-heading);">
+            100 % On-Device
+          </h3>
+          <p class="text-xs text-[#4B6E6A] leading-relaxed">
+            Keine Datenübertragung in eine Cloud. Lernfortschritte und Spielstände bleiben ausschließlich lokal auf deinem Gerät gespeichert.
+          </p>
+        </div>
+        <div class="mt-4 pt-4 border-t border-[#58CBBF]/15 text-[11px] font-semibold text-[#00897B]">
+          Kein Konto nötig
+        </div>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="rounded-3xl bg-[#F0FCFB]/70 border border-[#58CBBF]/20 p-6 flex flex-col justify-between hover:bg-[#F0FCFB] transition-colors">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-white border border-[#58CBBF]/30 flex items-center justify-center text-2xl mb-4 shadow-2xs">
+            🛡️
+          </div>
+          <h3 class="text-lg font-bold text-[#1A3533] mb-2" style="font-family: var(--font-heading);">
+            COPPA & Familienprogramm
+          </h3>
+          <p class="text-xs text-[#4B6E6A] leading-relaxed">
+            Strikte Einhaltung des Google Play Familienprogramms: Kein Werbe-ID Tracking, keine verhaltensbasierte Werbung und Inhalte mit Altersrating G.
+          </p>
+        </div>
+        <div class="mt-4 pt-4 border-t border-[#58CBBF]/15 text-[11px] font-semibold text-[#00897B]">
+          Garantierte Kindersicherheit
+        </div>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="rounded-3xl bg-[#F0FCFB]/70 border border-[#58CBBF]/20 p-6 flex flex-col justify-between hover:bg-[#F0FCFB] transition-colors">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-white border border-[#58CBBF]/30 flex items-center justify-center text-2xl mb-4 shadow-2xs">
+            🧘
+          </div>
+          <h3 class="text-lg font-bold text-[#1A3533] mb-2" style="font-family: var(--font-heading);">
+            Ungestörtes Lernen
+          </h3>
+          <p class="text-xs text-[#4B6E6A] leading-relaxed">
+            Niemals Vollbild-Unterbrechungen während einer laufenden Konzentrationsaufgabe oder eines Spiels. Voller Fokus auf das Wesentliche.
+          </p>
+        </div>
+        <div class="mt-4 pt-4 border-t border-[#58CBBF]/15 text-[11px] font-semibold text-[#00897B]">
+          Keine Reizüberflutung
+        </div>
+      </div>
+
+      <!-- Pillar 4 -->
+      <div class="rounded-3xl bg-[#F0FCFB]/70 border border-[#58CBBF]/20 p-6 flex flex-col justify-between hover:bg-[#F0FCFB] transition-colors">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-white border border-[#58CBBF]/30 flex items-center justify-center text-2xl mb-4 shadow-2xs">
+            🧡
+          </div>
+          <h3 class="text-lg font-bold text-[#1A3533] mb-2" style="font-family: var(--font-heading);">
+            Werte & Ermutigung
+          </h3>
+          <p class="text-xs text-[#4B6E6A] leading-relaxed">
+            Lernen soll Spaß machen und stärken! Betty belohnt jeden Versuch und jede Anstrengung mit Wärme, Geduld und positiver Bestärkung.
+          </p>
+        </div>
+        <div class="mt-4 pt-4 border-t border-[#58CBBF]/15 text-[11px] font-semibold text-[#00897B]">
+          Freude am Fortschritt
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Callout Box for Play Store Transparency -->
+    <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#B2EBE6]/30 via-white to-[#FDD5B4]/30 border border-[#58CBBF]/30 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="space-y-1 text-center sm:text-left">
+        <h4 class="text-base sm:text-lg font-bold text-[#1A3533]" style="font-family: var(--font-heading);">
+          Du möchtest mehr über unsere Datenschutzrichtlinien erfahren?
+        </h4>
+        <p class="text-xs sm:text-sm text-[#4B6E6A]">
+          Lies unsere transparente Datenschutzerklärung für den Google Play Store und alle Betty-Apps.
+        </p>
+      </div>
+      <a 
+        href="/datenschutz" 
+        class="inline-flex items-center px-6 py-3 rounded-2xl bg-[#00897B] hover:bg-[#007064] text-white font-bold text-xs sm:text-sm shadow-md transition-all hover:-translate-y-0.5 whitespace-nowrap"
+        style="font-family: var(--font-heading);"
+      >
+        Datenschutzerklärung lesen →
+      </a>
+    </div>
+
+  </div>
+</section>

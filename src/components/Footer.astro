@@ -1,0 +1,101 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-white border-t border-[#58CBBF]/20 mt-20 pt-16 pb-12 text-[#1A3533]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-100">
+      
+      <!-- Brand & Mission -->
+      <div class="md:col-span-2 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-[#F0FCFB] p-1 border border-[#58CBBF]/30 overflow-hidden">
+            <img src="/images/mascot/betty_winking.png" alt="Betty" class="w-full h-full object-cover" />
+          </div>
+          <span class="text-xl font-bold tracking-tight" style="font-family: var(--font-heading);">
+            Lern mit Betty<span class="text-[#FF8A34]">.</span>
+          </span>
+        </div>
+        <p class="text-sm text-[#4B6E6A] leading-relaxed max-w-md">
+          Liebevoll gestaltete Lern- und Geschicklichkeits-Apps für Kinder. Wir verbinden kindgerechte Pädagogik, hohe Motivation und 100 % Privatsphäre – ohne Tracking, ohne Datenverkäufe und ohne Überreizung.
+        </p>
+        <div class="flex items-center gap-2 text-xs font-semibold text-[#00897B] bg-[#F0FCFB] px-3 py-2 rounded-xl inline-block border border-[#58CBBF]/20">
+          🛡️ Konform mit Google Play Familienprogramm & COPPA
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-sm font-bold uppercase tracking-wider text-slate-800 mb-4" style="font-family: var(--font-heading);">
+          Unsere Apps
+        </h4>
+        <ul class="space-y-2.5 text-sm text-[#4B6E6A]">
+          <li>
+            <a href="/#fokus-mit-betty" class="hover:text-[#00897B] transition-colors">
+              Fokus mit Betty
+            </a>
+          </li>
+          <li>
+            <a href="/#rechnen-mit-betty" class="hover:text-[#00897B] transition-colors">
+              Rechne mit Betty
+            </a>
+          </li>
+          <li>
+            <a href="/#englisch-mit-betty" class="hover:text-[#00897B] transition-colors">
+              Englisch mit Betty
+            </a>
+          </li>
+          <li>
+            <a href="/#betty-slice" class="hover:text-[#00897B] transition-colors">
+              Betty's Slice
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal & Info -->
+      <div>
+        <h4 class="text-sm font-bold uppercase tracking-wider text-slate-800 mb-4" style="font-family: var(--font-heading);">
+          Rechtliches & Kontakt
+        </h4>
+        <ul class="space-y-2.5 text-sm text-[#4B6E6A]">
+          <li>
+            <a href="/datenschutz" class="hover:text-[#00897B] transition-colors font-medium">
+              Datenschutzerklärung
+            </a>
+          </li>
+          <li>
+            <a href="/impressum" class="hover:text-[#00897B] transition-colors font-medium">
+              Impressum & Anbieter
+            </a>
+          </li>
+          <li>
+            <a href="/#safety" class="hover:text-[#00897B] transition-colors">
+              Sicherheitsversprechen
+            </a>
+          </li>
+          <li>
+            <a href="mailto:support@lernmitbetty.de" class="hover:text-[#00897B] transition-colors">
+              support@lernmitbetty.de
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright & Disclaimer -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#527976] gap-4">
+      <div>
+        &copy; {currentYear} Lern mit Betty. Alle Rechte vorbehalten.
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Made with ❤️ for curious kids</span>
+        <span>•</span>
+        <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#00897B]">
+          Google Play Store
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
