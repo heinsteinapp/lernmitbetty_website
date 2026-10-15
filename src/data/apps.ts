@@ -10,9 +10,14 @@ export interface AppItem {
   gradient: string;
   badgeBg: string;
   playStoreUrl: string;
+  privacyUrl: string;
   packageName: string;
+  paidPackageName: string;
   isAvailable: boolean;
 }
+
+export const CONTACT_EMAIL = "heinstein.app@gmail.com";
+export const ADMOB_PUBLISHER_ID = "pub-9091345489987614";
 
 export const APPS: AppItem[] = [
   {
@@ -32,7 +37,9 @@ export const APPS: AppItem[] = [
     gradient: "from-teal-500 to-emerald-600",
     badgeBg: "bg-teal-50 text-teal-800 border-teal-200",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.fokusmitbetty",
+    privacyUrl: "/datenschutz/fokus-mit-betty",
     packageName: "com.heinstein.fokusmitbetty",
+    paidPackageName: "com.heinstein.fokusmitbettypaid",
     isAvailable: true
   },
   {
@@ -52,7 +59,9 @@ export const APPS: AppItem[] = [
     gradient: "from-orange-500 to-amber-600",
     badgeBg: "bg-orange-50 text-orange-800 border-orange-200",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.rechnemitbetty",
+    privacyUrl: "/datenschutz/rechnen-mit-betty",
     packageName: "com.heinstein.rechnemitbetty",
+    paidPackageName: "com.heinstein.rechnemitbettypaid",
     isAvailable: true
   },
   {
@@ -71,8 +80,10 @@ export const APPS: AppItem[] = [
     ],
     gradient: "from-sky-500 to-blue-600",
     badgeBg: "bg-sky-50 text-sky-800 border-sky-200",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.englischmitbetty",
-    packageName: "com.heinstein.englischmitbetty",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.lernemitbetty",
+    privacyUrl: "/datenschutz/englisch-mit-betty",
+    packageName: "com.heinstein.lernemitbetty",
+    paidPackageName: "com.heinstein.lernemitbettypaid",
     isAvailable: true
   },
   {
@@ -92,7 +103,9 @@ export const APPS: AppItem[] = [
     gradient: "from-amber-500 to-rose-500",
     badgeBg: "bg-amber-50 text-amber-800 border-amber-200",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.bettyslice",
+    privacyUrl: "/datenschutz/betty-slice",
     packageName: "com.heinstein.bettyslice",
+    paidPackageName: "com.heinstein.bettyslicepaid",
     isAvailable: true
   }
 ];

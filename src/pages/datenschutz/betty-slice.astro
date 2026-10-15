@@ -1,0 +1,196 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Datenschutzerklärung für Betty's Slice | Lern mit Betty"
+  description="Offizielle Datenschutzerklärung für Betty's Slice (com.heinstein.bettyslice) und Betty's Slice Werbefrei (com.heinstein.bettyslicepaid)."
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+    
+    <!-- Breadcrumb / Back -->
+    <div class="mb-8 flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#00897B]">
+      <a href="/datenschutz" class="hover:underline">← Alle Datenschutzerklärungen</a>
+      <span>/</span>
+      <span class="text-slate-500">Betty's Slice</span>
+    </div>
+
+    <!-- App Header Banner -->
+    <div class="rounded-3xl bg-white p-6 sm:p-8 border-2 border-[#58CBBF]/20 shadow-sm mb-12 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+      <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl p-1 bg-white border border-slate-200 shadow-sm flex-shrink-0 overflow-hidden">
+        <img src="/images/apps/betty_slice.png" alt="Betty's Slice" class="w-full h-full object-cover" />
+      </div>
+      <div class="space-y-1.5 text-center sm:text-left flex-grow">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-xs font-bold text-amber-800">
+          <span>🐾</span> Geschicklichkeit & Familienspaß
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-extrabold text-[#1A3533]" style="font-family: var(--font-heading);">
+          Datenschutzerklärung für „Betty's Slice“
+        </h1>
+        <p class="text-xs sm:text-sm text-[#4B6E6A]">
+          <strong>Gültig ab:</strong> 15. Oktober 2026 • <strong>Zuletzt aktualisiert:</strong> 15. Oktober 2026
+        </p>
+        <div class="pt-2 flex flex-wrap gap-2 text-xs font-mono text-slate-600">
+          <span class="bg-slate-100 px-2 py-0.5 rounded">Gratis: com.heinstein.bettyslice</span>
+          <span class="bg-slate-100 px-2 py-0.5 rounded">Werbefrei: com.heinstein.bettyslicepaid</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Document Content -->
+    <div class="space-y-8 text-sm sm:text-base text-[#1A3533] leading-relaxed">
+      
+      <!-- Section 1 -->
+      <section class="rounded-3xl bg-white p-6 sm:p-8 border border-[#58CBBF]/20 shadow-xs space-y-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-[#00897B]" style="font-family: var(--font-heading);">
+          1. Verantwortlicher
+        </h2>
+        <p>
+          Verantwortlich für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG):
+        </p>
+        <div class="bg-[#F0FCFB] p-4 rounded-2xl border border-[#58CBBF]/20 text-sm">
+          <p class="font-bold text-[#1A3533]">Benjamin Heinz</p>
+          <p>E-Mail: <a href="mailto:heinstein.app@gmail.com" class="text-[#00897B] font-semibold underline">heinstein.app@gmail.com</a></p>
+          <p>Website: <a href="https://lernmitbetty.de" class="text-[#00897B] font-semibold underline">https://lernmitbetty.de</a></p>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="rounded-3xl bg-white p-6 sm:p-8 border border-[#58CBBF]/20 shadow-xs space-y-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-[#00897B]" style="font-family: var(--font-heading);">
+          2. Grundsatz: Lokale Datenverarbeitung & Datensparsamkeit
+        </h2>
+        <p>
+          Der Schutz Ihrer persönlichen Daten und der Daten Ihrer Kinder ist uns ein wichtiges Anliegen. <em>Betty's Slice</em> folgt dem Prinzip <strong>„Privacy by Design“</strong>:
+        </p>
+        <ul class="list-disc pl-5 space-y-1.5 text-[#4B6E6A]">
+          <li>Alle Highscores, Spielstände, Freischaltungen und App-Einstellungen werden <strong>ausschließlich lokal auf Ihrem Endgerät</strong> gespeichert.</li>
+          <li>Es ist <strong>keine Registrierung</strong>, <strong>kein Benutzerkonto</strong> und <strong>keine Angabe von Namen oder E-Mail-Adressen</strong> erforderlich.</li>
+          <li>Wir betreiben keine eigenen Server, auf denen Spieldaten oder Nutzerprofile gespeichert oder ausgewertet werden.</li>
+        </ul>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="rounded-3xl bg-white p-6 sm:p-8 border border-[#58CBBF]/20 shadow-xs space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-[#00897B]" style="font-family: var(--font-heading);">
+          3. Berechtigungen und deren Zweck
+        </h2>
+        
+        <div class="space-y-3">
+          <h3 class="font-bold text-[#1A3533]">3.1 Vibrationsmotor (<code>android.permission.VIBRATE</code>)</h3>
+          <p class="text-sm text-[#4B6E6A]">
+            <strong>Zweck:</strong> Für haptisches Feedback bei Wischbewegungen, Treffern und Erfolgsmomenten.<br />
+            <strong>Datenverarbeitung:</strong> Es werden keinerlei Daten erfasst oder gespeichert.
+          </p>
+
+          <h3 class="font-bold text-[#1A3533] pt-2">3.2 Internet- und Netzwerkstatus (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>)</h3>
+          <p class="text-sm text-[#4B6E6A]">
+            <strong>Gratis-Version (<code>com.heinstein.bettyslice</code>):</strong> Wird ausschließlich zur Auslieferung von Werbeanzeigen über Google AdMob benötigt (siehe Abschnitt 4).<br />
+            <strong>Premium-Version (<code>com.heinstein.bettyslicepaid</code>):</strong> Diese Version ist vollständig werbefrei und offline spielbar.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="rounded-3xl bg-white p-6 sm:p-8 border border-[#58CBBF]/20 shadow-xs space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-[#00897B]" style="font-family: var(--font-heading);">
+          4. Werbung & Google Play Familienprogramm (nur Gratis-Version)
+        </h2>
+        <p>
+          In der kostenlosen Version (<em>Betty's Slice</em>, <code>com.heinstein.bettyslice</code>) wird Google AdMob zur Finanzierung eingesetzt.
+        </p>
+
+        <h3 class="font-bold text-[#1A3533] pt-2">4.1 Kinderschutz & Jugendschutz (COPPA, TFCD & Altersfreigabe)</h3>
+        <p class="text-sm text-[#4B6E6A]">
+          Auch in <em>Betty's Slice</em> gelten strengste Sicherheitsfilter:
+        </p>
+        <ul class="list-disc pl-5 space-y-1 text-sm text-[#4B6E6A]">
+          <li><strong>Maximales Inhalts-Rating „G“ (<code>MAX_AD_CONTENT_RATING_G</code>):</strong> Verbindlich nur jugendfreie Anzeigen für alle Altersgruppen.</li>
+          <li><strong>Keine personalisierte Werbung / TFCD:</strong> Werbe-ID-Tracking ist unterbunden.</li>
+          <li><strong>Keine Spielunterbrechung:</strong> Keine störenden Vollbild-Anzeigen mitten im Spielgeschehen.</li>
+        </ul>
+      </section>
+
+      <!-- Section 5, 6 & 7 -->
+      <section class="rounded-3xl bg-white p-6 sm:p-8 border border-[#58CBBF]/20 shadow-xs space-y-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-[#00897B]" style="font-family: var(--font-heading);">
+          5. Keine Weitergabe an Dritte & Keine Analysetools
+        </h2>
+        <p class="text-[#4B6E6A]">
+          Keine externen Tracking- oder Analytics-Frameworks (kein Firebase, kein Facebook SDK).
+        </p>
+
+        <h2 class="text-xl sm:text-2xl font-bold text-[#00897B] pt-4" style="font-family: var(--font-heading);">
+          6. Datensicherheit & Löschung
+        </h2>
+        <p class="text-[#4B6E6A]">
+          Durch Löschen der App-Daten in den Android-Einstellungen oder durch Deinstallation werden alle lokalen Spieldaten sofort und vollständig gelöscht.
+        </p>
+
+        <h2 class="text-xl sm:text-2xl font-bold text-[#00897B] pt-4" style="font-family: var(--font-heading);">
+          7. Kontakt
+        </h2>
+        <p class="text-sm">
+          Bei allen Fragen: <a href="mailto:heinstein.app@gmail.com" class="text-[#00897B] underline">heinstein.app@gmail.com</a>
+        </p>
+      </section>
+
+      <!-- Section 8: Play Console Safety Table -->
+      <section class="rounded-3xl bg-white p-6 sm:p-8 border border-[#58CBBF]/20 shadow-xs space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">📋</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-[#00897B]" style="font-family: var(--font-heading);">
+            Google Play „Datensicherheit“-Fragebogen (Data Safety)
+          </h2>
+        </div>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="border-b-2 border-slate-200 bg-slate-50 text-[#1A3533]">
+                <th class="p-3 font-bold">Frage im Play Console Formular</th>
+                <th class="p-3 font-bold">Betty's Slice (Gratis)</th>
+                <th class="p-3 font-bold">Betty's Slice Paid</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-[#4B6E6A]">
+              <tr>
+                <td class="p-3 font-medium text-[#1A3533]">Werden Daten erhoben oder geteilt?</td>
+                <td class="p-3 text-amber-700 font-semibold">Ja (durch Google AdMob SDK)</td>
+                <td class="p-3 text-emerald-700 font-semibold">Nein (0 Daten erhoben/geteilt)</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium text-[#1A3533]">Verschlüsselte Übertragung?</td>
+                <td class="p-3">Ja (HTTPS bei AdMob)</td>
+                <td class="p-3">Entfällt</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium text-[#1A3533]">Möglichkeit zur Kontolöschung?</td>
+                <td class="p-3">Nein (keine Konten)</td>
+                <td class="p-3">Nein (keine Konten)</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium text-[#1A3533]">Zielgruppen / Familienprogramm</td>
+                <td class="p-3 font-semibold text-emerald-700">Rating G & TFCD aktiv</td>
+                <td class="p-3 font-semibold text-emerald-700">Rating G (100% offline)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Back to Hub -->
+    <div class="mt-12 text-center">
+      <a 
+        href="/datenschutz" 
+        class="inline-flex items-center px-6 py-3 rounded-2xl bg-[#00897B] text-white font-bold text-sm shadow-md hover:bg-[#007064] transition-all"
+        style="font-family: var(--font-heading);"
+      >
+        ← Zurück zur Datenschutz-Übersicht
+      </a>
+    </div>
+
+  </div>
+</Layout>

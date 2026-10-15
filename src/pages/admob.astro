@@ -1,0 +1,163 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ADMOB_PUBLISHER_ID, CONTACT_EMAIL, APPS } from '../data/apps';
+---
+
+<Layout 
+  title="Google AdMob & Kinderschutz-Dokumentation | Lern mit Betty"
+  description="Transparenz- und Verifizierungsseite für Google AdMob, Google Play Familienprogramm und app-ads.txt für alle Apps von Lern mit Betty."
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+    
+    <!-- Breadcrumb / Back -->
+    <div class="mb-8 flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#00897B]">
+      <a href="/" class="hover:underline">← Zurück zur Startseite</a>
+      <span>/</span>
+      <span class="text-slate-500">Google AdMob Compliance</span>
+    </div>
+
+    <!-- Header Banner -->
+    <div class="rounded-3xl bg-white p-6 sm:p-8 border-2 border-[#58CBBF]/20 shadow-sm mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-bold text-emerald-800 mb-3">
+        <span>🛡️</span>
+        <span>Zertifizierte Werbeeinbindung & Publisher-Dokumentation</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-[#1A3533] tracking-tight mb-4" style="font-family: var(--font-heading);">
+        Google AdMob & Kinderschutz
+      </h1>
+      <p class="text-sm sm:text-base text-[#4B6E6A] leading-relaxed">
+        Diese Seite dient der <strong>vollständigen Transparenz für Eltern, Erziehende und das Google Play Store Review-Team</strong> bezüglich der Werbeeinbindung über das Google Mobile Ads (AdMob) SDK in den kostenlosen Versionen unserer Betty-Apps.
+      </p>
+    </div>
+
+    <!-- Verification Badge Box (app-ads.txt & Publisher ID) -->
+    <div class="rounded-3xl bg-gradient-to-br from-[#1A3533] to-[#00897B] text-white p-6 sm:p-8 shadow-md mb-12 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <div class="text-xs uppercase tracking-wider text-emerald-300 font-bold mb-1">
+            Google AdMob Publisher-Verifikation
+          </div>
+          <div class="text-xl sm:text-2xl font-mono font-bold tracking-tight">
+            {ADMOB_PUBLISHER_ID}
+          </div>
+        </div>
+        <a 
+          href="/app-ads.txt" 
+          target="_blank" 
+          class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-white text-[#1A3533] font-bold text-xs hover:bg-emerald-50 transition-colors shadow-xs"
+        >
+          <span>📄 app-ads.txt ansehen</span>
+        </a>
+      </div>
+      <div class="text-xs text-slate-200 leading-relaxed pt-2 border-t border-white/10 font-mono">
+        google.com, {ADMOB_PUBLISHER_ID}, DIRECT, f08c47fec0942fa0
+      </div>
+    </div>
+
+    <!-- Core Compliance Pillars -->
+    <div class="space-y-8 text-sm sm:text-base text-[#1A3533] leading-relaxed">
+      
+      <!-- Pillar 1 -->
+      <section class="rounded-3xl bg-white p-6 sm:p-8 border border-[#58CBBF]/20 shadow-xs space-y-3">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🧸</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-[#00897B]" style="font-family: var(--font-heading);">
+            1. Strikte COPPA- & TFCD-Konfiguration (Kinderschutz)
+          </h2>
+        </div>
+        <p>
+          Alle Werbeabrufe in unseren werbefinanzierten Apps werden technisch zwingend mit folgenden Flags initialisiert:
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-[#4B6E6A]">
+          <li>
+            <strong><code>TAG_FOR_CHILD_DIRECTED_TREATMENT_TRUE</code>:</strong> Signalisiert Google AdMob die Behandlung als kindgerechte App gemäß Children’s Online Privacy Protection Act (COPPA).
+          </li>
+          <li>
+            <strong><code>TAG_FOR_UNDER_AGE_OF_CONSENT_TRUE</code>:</strong> Stellt sicher, dass auch nach europäischem Datenschutzrecht (DSGVO-K) keine einwilligungspflichtigen Werbedaten verarbeitet werden.
+          </li>
+          <li>
+            <strong><code>MAX_AD_CONTENT_RATING_G</code>:</strong> Es dürfen ausnahmslos nur Werbeanzeigen mit dem Inhalts-Rating „G“ (General Audience, geeignet für alle Altersstufen) ausgeliefert werden. Inhalte zu Dating, Alkohol, Glücksspiel, Gewalt oder nicht jugendfreien Medien sind strikt gesperrt.
+          </li>
+          <li>
+            <strong>Keine Werbe-ID (<code>AD_ID</code>):</strong> Unsere Android-Manifeste fordern die Google-Werbe-ID-Berechtigung <strong>nicht</strong> an. Personalisierte oder profilbasierte Werbung ist technisch ausgeschlossen.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Pillar 2 -->
+      <section class="rounded-3xl bg-white p-6 sm:p-8 border border-[#58CBBF]/20 shadow-xs space-y-3">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🧘</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-[#00897B]" style="font-family: var(--font-heading);">
+            2. Schutz der Konzentration: Kein Werbedruck beim Lernen
+          </h2>
+        </div>
+        <p class="text-[#4B6E6A]">
+          Kinder sollen in Ruhe und ohne Stress lernen können. Deshalb unterliegt die Einblendung von Anzeigen strengen didaktischen Regeln:
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-[#4B6E6A]">
+          <li><strong>Keine Unterbrechung laufender Aufgaben:</strong> Während einer aktiven Schulte-Tabelle, Gorbov-Runde, Atemübung oder Rechenaufgabe werden niemals Pop-Ups oder Interstitials geschaltet.</li>
+          <li><strong>Feste Banner-Platzierung:</strong> Bannerwerbung verbleibt fest am unteren Bildschirmrand auf einem blickdichten Surface, mit ausreichend Abstand zu Bedienelementen, um versehentliche Klicks zu vermeiden.</li>
+          <li><strong>Rewarded Ads nur auf Wunsch:</strong> Belohnungsvideos (z. B. zum Auffüllen von Bonus-Herzen) starten ausschließlich nach aktiver, bewusster Bestätigung durch den Nutzer.</li>
+        </ul>
+      </section>
+
+      <!-- Pillar 3 -->
+      <section class="rounded-3xl bg-white p-6 sm:p-8 border border-[#58CBBF]/20 shadow-xs space-y-3">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">✨</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-[#00897B]" style="font-family: var(--font-heading);">
+            3. Die werbefreien Kaufversionen (Paid-Flavors)
+          </h2>
+        </div>
+        <p class="text-[#4B6E6A]">
+          Für Eltern, Schulen und Bildungseinrichtungen, die ein vollständig werbefreies Erlebnis bevorzugen, bieten wir jede Betty-App als eigenständige Kaufversion an:
+        </p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          {APPS.map((app) => (
+            <div class="bg-[#F0FCFB] p-4 rounded-2xl border border-[#58CBBF]/20 text-xs">
+              <div class="font-bold text-[#1A3533]">{app.name} Werbefrei</div>
+              <div class="font-mono text-slate-500 mt-1">{app.paidPackageName}</div>
+              <div class="text-[#00897B] font-semibold mt-2">✓ 0 % Werbung, 100 % Offline</div>
+            </div>
+          ))}
+        </div>
+        <p class="text-xs text-[#527976] pt-2">
+          In diesen Paid-Flavors ist die Android-Berechtigung <code>android.permission.INTERNET</code> nicht vorhanden.
+        </p>
+      </section>
+
+      <!-- Pillar 4: Contact & Reviewer Info -->
+      <section class="rounded-3xl bg-white p-6 sm:p-8 border border-[#58CBBF]/20 shadow-xs space-y-3">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">📬</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-[#00897B]" style="font-family: var(--font-heading);">
+            4. Kontakt für Rückfragen & Compliance
+          </h2>
+        </div>
+        <p class="text-[#4B6E6A]">
+          Bei regulatorischen Fragen zur Google Play Store Compliance, AdMob-Verifizierung oder zum Datenschutz wenden Sie sich bitte direkt an den Entwickler:
+        </p>
+        <div class="bg-[#F0FCFB] p-4 rounded-2xl border border-[#58CBBF]/20 text-sm">
+          <p class="font-bold text-[#1A3533]">Benjamin Heinz</p>
+          <p>E-Mail: <a href={`mailto:${CONTACT_EMAIL}`} class="text-[#00897B] font-semibold underline">{CONTACT_EMAIL}</a></p>
+          <p>Website: <a href="https://lernmitbetty.de" class="text-[#00897B] underline">https://lernmitbetty.de</a></p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Back to top / Home -->
+    <div class="mt-12 text-center">
+      <a 
+        href="/" 
+        class="inline-flex items-center px-6 py-3 rounded-2xl bg-[#00897B] text-white font-bold text-sm shadow-md hover:bg-[#007064] transition-all"
+        style="font-family: var(--font-heading);"
+      >
+        ← Zurück zur Startseite
+      </a>
+    </div>
+
+  </div>
+</Layout>
