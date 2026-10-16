@@ -43,7 +43,7 @@ export const APPS: AppItem[] = [
     privacyUrl: "/datenschutz/fokus-mit-betty",
     packageName: "com.heinstein.fokusmitbetty",
     paidPackageName: "com.heinstein.fokusmitbettypaid",
-    isAvailable: true
+    isAvailable: false
   },
   {
     id: "rechnen-mit-betty",
@@ -109,7 +109,7 @@ export const APPS: AppItem[] = [
     privacyUrl: "/datenschutz/betty-slice",
     packageName: "com.heinstein.bettyslice",
     paidPackageName: "com.heinstein.bettyslicepaid",
-    isAvailable: true
+    isAvailable: false
   }
 ];
 

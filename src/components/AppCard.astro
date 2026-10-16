@@ -28,6 +28,11 @@ const { app } = Astro.props;
 
       <!-- Badges -->
       <div class="flex flex-col items-end gap-2 text-right">
+        {!app.isAvailable && (
+          <span class="text-xs font-bold px-3 py-1 rounded-full border bg-amber-50 text-amber-900 border-amber-200 flex items-center gap-1 shadow-xs">
+            <span>⏳</span> Demnächst verfügbar
+          </span>
+        )}
         <span class={`text-xs font-bold px-3 py-1 rounded-full border ${app.badgeBg}`}>
           {app.category}
         </span>
@@ -67,37 +72,66 @@ const { app } = Astro.props;
     </div>
   </div>
 
-  <!-- Action: Google Play Store Button -->
+  <!-- Action: Google Play Store Button / Coming Soon State -->
   <div class="pt-2 border-t border-slate-100">
-    <a 
-      href={app.playStoreUrl}
-      target="_blank" 
-      rel="noopener noreferrer"
-      class="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-2xl bg-[#1A3533] hover:bg-[#00897B] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all group-hover:bg-[#00897B]"
-      style="font-family: var(--font-heading);"
-    >
-      <!-- Google Play Icon SVG -->
-      <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M3.609 1.814L13.792 12 3.61 22.186c-.368-.382-.61-.951-.61-1.686V3.5c0-.735.242-1.304.61-1.686zM15.207 13.414l2.122 2.122-12.02 6.84 9.898-8.962zm0-2.828L5.309 1.624l12.02 6.84-2.122 2.122zm1.414 1.414l3.693 2.102c.983.559.983 1.477 0 2.036l-3.693 2.102-1.897-1.897 1.897-4.343z"/>
-      </svg>
-      <div class="flex flex-col text-left leading-none">
-        <span class="text-[10px] uppercase tracking-wider font-medium text-slate-300">Jetzt herunterladen</span>
-        <span class="text-sm font-extrabold mt-0.5">Google Play</span>
-      </div>
-    </a>
-    <div class="flex items-center justify-between mt-3 pt-2 border-t border-slate-100 text-[11px]">
-      <a 
-        href={`/feedback?app=${app.id}`} 
-        class="text-[#FF8A34] hover:text-[#E67520] font-bold flex items-center gap-1 transition-colors"
-      >
-        <span>💡</span> Idee für {app.name}
-      </a>
-      <a 
-        href={app.privacyUrl} 
-        class="text-[#527976] hover:text-[#00897B] font-semibold transition-colors"
-      >
-        🛡️ Datenschutz
-      </a>
-    </div>
+    {app.isAvailable ? (
+      <>
+        <a 
+          href={app.playStoreUrl}
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-2xl bg-[#1A3533] hover:bg-[#00897B] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all group-hover:bg-[#00897B]"
+          style="font-family: var(--font-heading);"
+        >
+          <!-- Google Play Icon SVG -->
+          <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3.609 1.814L13.792 12 3.61 22.186c-.368-.382-.61-.951-.61-1.686V3.5c0-.735.242-1.304.61-1.686zM15.207 13.414l2.122 2.122-12.02 6.84 9.898-8.962zm0-2.828L5.309 1.624l12.02 6.84-2.122 2.122zm1.414 1.414l3.693 2.102c.983.559.983 1.477 0 2.036l-3.693 2.102-1.897-1.897 1.897-4.343z"/>
+          </svg>
+          <div class="flex flex-col text-left leading-none">
+            <span class="text-[10px] uppercase tracking-wider font-medium text-slate-300">Jetzt herunterladen</span>
+            <span class="text-sm font-extrabold mt-0.5">Google Play</span>
+          </div>
+        </a>
+        <div class="flex items-center justify-between mt-3 pt-2 border-t border-slate-100 text-[11px]">
+          <a 
+            href={`/feedback?app=${app.id}`} 
+            class="text-[#FF8A34] hover:text-[#E67520] font-bold flex items-center gap-1 transition-colors"
+          >
+            <span>💡</span> Idee für {app.name}
+          </a>
+          <a 
+            href={app.privacyUrl} 
+            class="text-[#527976] hover:text-[#00897B] font-semibold transition-colors"
+          >
+            🛡️ Datenschutz
+          </a>
+        </div>
+      </>
+    ) : (
+      <>
+        <!-- Demnächst verfügbar Info-Button -->
+        <div class="w-full inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-2xl bg-slate-100 border border-slate-200 text-slate-600 font-bold text-sm select-none">
+          <span class="text-base">⏳</span>
+          <div class="flex flex-col text-left leading-none">
+            <span class="text-[10px] uppercase tracking-wider font-semibold text-slate-400">Erscheint demnächst</span>
+            <span class="text-xs sm:text-sm font-extrabold text-slate-700 mt-0.5">In Kürze im Google Play Store</span>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-2 mt-3 pt-2 border-t border-slate-100 text-[11px]">
+          <a 
+            href={`/feedback?app=${app.id}`} 
+            class="w-full sm:w-auto text-center px-3.5 py-1.5 rounded-xl bg-[#FF8A34]/15 hover:bg-[#FF8A34]/25 text-[#FF8A34] hover:text-[#E67520] font-bold flex items-center justify-center gap-1.5 transition-colors"
+          >
+            <span>💡</span> Ideen vor Release einreichen →
+          </a>
+          <a 
+            href={app.privacyUrl} 
+            class="text-[#527976] hover:text-[#00897B] font-semibold transition-colors flex-shrink-0"
+          >
+            🛡️ Datenschutz
+          </a>
+        </div>
+      </>
+    )}
   </div>
 </div>
