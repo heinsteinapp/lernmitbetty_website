@@ -41,13 +41,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://lernmitb
     <meta property="og:image" content={new URL(image, canonicalURL)} />
     <meta property="og:locale" content="de_DE" />
 
-    <!-- Google Fonts: Fredoka & Nunito -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" 
-      rel="stylesheet" 
-    />
+    <!-- Local Fonts (Fredoka & Nunito loaded locally in global.css, 100% DSGVO-konform) -->
   </head>
   <body class="min-h-screen flex flex-col bg-[#F0FCFB] text-[#1A3533] selection:bg-[#58CBBF]/30 selection:text-[#00897B]">
     <Header />

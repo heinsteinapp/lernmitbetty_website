@@ -27,7 +27,7 @@ export const APPS: AppItem[] = [
     id: "fokus-mit-betty",
     name: "Fokus mit Betty",
     tagline: "Konzentration, Achtsamkeit & Schulte-Tische",
-    description: "Steigert spielerisch die Aufmerksamkeitsspanne und das Sehfeld von Kindern durch wissenschaftlich fundierte Schulte-Tische, Gorbov-Rot-Schwarz-Tabellen und geführte Betty-Atempausen.",
+    description: "Steigert spielerisch die Aufmerksamkeitsspanne und das Sehfeld von Kindern – angelehnt an das bewährte Prinzip klassischer Schulte-Tabellen, Gorbov-Rot-Schwarz-Übungen und geführter Betty-Atempausen.",
     targetAge: "Ab 6 Jahren",
     category: "Konzentration & Fokus",
     icon: "/images/apps/fokus_mit_betty.png",
@@ -35,7 +35,7 @@ export const APPS: AppItem[] = [
       "Schulte-Zahlentische (3×3 bis 7×7) zur Blickspanne-Erweiterung",
       "Gorbov Rot-Schwarz-Tabellen für höchste Konzentrationsdisziplin",
       "Geführte Atem- und Entspannungsphasen mit Betty",
-      "100 % werbe- und ablenkungsfreie Übungseinheiten"
+      "Ablenkungsfreie Übungseinheiten ohne Werbeunterbrechungen während des Trainings"
     ],
     gradient: "from-teal-500 to-emerald-600",
     badgeBg: "bg-teal-50 text-teal-800 border-teal-200",
@@ -116,13 +116,13 @@ export const APPS: AppItem[] = [
 export const SAFETY_POINTS = [
   {
     icon: "shield",
-    title: "100 % On-Device & Offline",
-    description: "Alle Lernfortschritte, Punktestände und Profile bleiben lokal auf dem Gerät. Es finden keinerlei Datentransfers in die Cloud statt."
+    title: "100 % Lokale Lernstände",
+    description: "Alle Lernfortschritte und Spielstände bleiben lokal auf deinem Gerät gespeichert – ohne Benutzerkonto, ohne Cloud. Werbefreie Pro-Versionen sind 100 % offline."
   },
   {
     icon: "baby",
     title: "Google Play Familienprogramm & COPPA",
-    description: "Entwickelt nach den strengsten Google Play Familienschutz-Richtlinien. Keine personalisierte Werbung, kein Werbe-ID-Tracking, Rating G."
+    description: "Entwickelt nach den strengsten Google Play Familienschutz-Richtlinien: Kein Werbe-ID-Tracking, keine personalisierte Werbung, Rating G."
   },
   {
     icon: "sparkles",
