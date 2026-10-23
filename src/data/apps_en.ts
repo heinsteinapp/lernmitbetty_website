@@ -25,7 +25,7 @@ export const APPS_EN: AppItem[] = [
   },
   {
     id: "rechnen-mit-betty",
-    name: "Math with Betty",
+    name: "Count on Betty",
     tagline: "Playful Mental Math & Arithmetic Adventures",
     description: "Turn numbers into best friends! Addition, subtraction, multiplication, and division: Together with Betty the poodle, kids build real math confidence.",
     targetAge: "Preschool & Elementary",
@@ -47,17 +47,17 @@ export const APPS_EN: AppItem[] = [
   },
   {
     id: "englisch-mit-betty",
-    name: "English with Betty",
-    tagline: "Vocabulary Trainer & Playful Language Discovery",
-    description: "The friendly, anxiety-free start into the English language. Featuring loving illustrations, native audio pronunciation, and delightful mini-puzzles.",
-    targetAge: "Elementary School (Ages 6+)",
+    name: "Learn English with Betty",
+    tagline: "Vocabulary Trainer with Book Scanner & Speech",
+    description: "The motivating, anxiety-free vocabulary trainer for children. Featuring smart textbook page scanning (OCR), native speech recognition, and encouraging feedback.",
+    targetAge: "Elementary School (Grades 1–6)",
     category: "Language Learning",
     icon: "/images/apps/englisch_mit_betty.png",
     highlights: [
-      "Child-friendly worlds: Animals, Colors, Numbers & School",
-      "Crystal-clear native speaker audio pronunciation for every word",
-      "Smart repetition logic for long-term vocabulary retention",
-      "Stress-free learning at each child's own personal pace"
+      "Smart textbook page scanner (OCR) converts word lists in seconds",
+      "Child-safe on-device speech training for confident pronunciation",
+      "3 engaging practice modes: Flashcards, Typing & Speech",
+      "Daily golden bones & 3 protective streak shields"
     ],
     gradient: "from-sky-500 to-blue-600",
     badgeBg: "bg-sky-50 text-sky-800 border-sky-200",
