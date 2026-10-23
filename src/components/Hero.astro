@@ -1,4 +1,12 @@
 ---
+interface Props {
+  lang?: 'de' | 'en';
+}
+
+const { lang = 'de' } = Astro.props;
+const isEn = lang === 'en';
+const appsHash = isEn ? '/en/#apps' : '#apps';
+const safetyHash = isEn ? '/en/#safety' : '#safety';
 ---
 
 <section class="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24">
@@ -17,52 +25,54 @@
         <!-- Betty's Tag Badge -->
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 border border-[#58CBBF]/40 shadow-xs text-xs sm:text-sm font-bold text-[#00897B]">
           <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#43A047] animate-pulse"></span>
-          <span>Willkommen in Bettys bunter Lernwelt!</span>
+          <span>{isEn ? "Welcome to Betty's colorful learning world!" : "Willkommen in Bettys bunter Lernwelt!"}</span>
         </div>
 
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#1A3533] leading-[1.15]" style="font-family: var(--font-heading);">
-          Lernen mit Herz, <br />
+          {isEn ? 'Learning with Heart, ' : 'Lernen mit Herz, '}<br />
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00897B] via-[#58CBBF] to-[#E8935C]">
-            Spaß und Köpfchen.
+            {isEn ? 'Joy and Curiosity.' : 'Spaß und Köpfchen.'}
           </span>
         </h1>
 
         <p class="text-base sm:text-lg text-[#4B6E6A] leading-relaxed max-w-xl mx-auto lg:mx-0">
-          Ob Konzentrationstraining, Kopfrechnen, erstes Englisch oder rasante Pfoten-Action: Mit Hündin Betty entdecken Kinder spielerisch ihre Stärken. Entwickelt mit Liebe für kleine Entdecker und ein gutes Gefühl bei Eltern.
+          {isEn 
+            ? 'Whether concentration training, mental math, first English words, or fast-paced paw action: With Betty the poodle, children joyfully discover their strengths. Built with love for curious kids and true peace of mind for parents.'
+            : 'Ob Konzentrationstraining, Kopfrechnen, erstes Englisch oder rasante Pfoten-Action: Mit Hündin Betty entdecken Kinder spielerisch ihre Stärken. Entwickelt mit Liebe für kleine Entdecker und ein gutes Gefühl bei Eltern.'}
         </p>
 
         <!-- Feature Pills -->
         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-2 text-xs font-bold text-[#1A3533]">
           <span class="px-3 py-1.5 rounded-xl bg-white/80 border border-[#B2EBE6] shadow-xs flex items-center gap-1.5">
-            <span class="text-emerald-600">✓</span> Lokale Lernstände (Keine Konten)
+            <span class="text-emerald-600">✓</span> {isEn ? 'Local Progress (No Accounts)' : 'Lokale Lernstände (Keine Konten)'}
           </span>
           <span class="px-3 py-1.5 rounded-xl bg-white/80 border border-[#B2EBE6] shadow-xs flex items-center gap-1.5">
-            <span class="text-emerald-600">✓</span> Kein Werbe-ID Tracking
+            <span class="text-emerald-600">✓</span> {isEn ? 'No Ad-ID Tracking' : 'Kein Werbe-ID Tracking'}
           </span>
           <span class="px-3 py-1.5 rounded-xl bg-white/80 border border-[#B2EBE6] shadow-xs flex items-center gap-1.5">
-            <span class="text-emerald-600">✓</span> Google Play Familienprogramm
+            <span class="text-emerald-600">✓</span> {isEn ? 'Google Play Family Program' : 'Google Play Familienprogramm'}
           </span>
         </div>
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
           <a 
-            href="#apps" 
+            href={appsHash} 
             class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-[#FF8A34] hover:bg-[#E67520] text-white font-extrabold text-base shadow-lg shadow-[#FF8A34]/25 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all text-center"
             style="font-family: var(--font-heading);"
           >
-            Alle 4 Apps entdecken
+            {isEn ? 'Explore All 4 Apps' : 'Alle 4 Apps entdecken'}
             <svg class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 5v14"></path>
               <path d="m19 12-7 7-7-7"></path>
             </svg>
           </a>
           <a 
-            href="#safety" 
+            href={safetyHash} 
             class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 rounded-2xl bg-white hover:bg-[#F0FCFB] text-[#00897B] border border-[#58CBBF]/40 font-bold text-base shadow-sm hover:shadow transition-all text-center"
             style="font-family: var(--font-heading);"
           >
-            🛡️ Das Betty-Sicherheitsversprechen
+            {isEn ? '🛡️ The Betty Safety Promise' : '🛡️ Das Betty-Sicherheitsversprechen'}
           </a>
         </div>
 

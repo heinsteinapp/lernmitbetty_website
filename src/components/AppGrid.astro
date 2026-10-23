@@ -1,6 +1,15 @@
 ---
 import { APPS } from '../data/apps';
+import { APPS_EN } from '../data/apps_en';
 import AppCard from './AppCard.astro';
+
+interface Props {
+  lang?: 'de' | 'en';
+}
+
+const { lang = 'de' } = Astro.props;
+const isEn = lang === 'en';
+const appList = isEn ? APPS_EN : APPS;
 ---
 
 <section id="apps" class="py-16 sm:py-20 scroll-mt-20">
@@ -10,20 +19,22 @@ import AppCard from './AppCard.astro';
     <div class="text-center max-w-2xl mx-auto mb-14">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B2EBE6]/50 border border-[#58CBBF]/40 text-xs font-bold text-[#00897B] mb-3">
         <span>🐾</span>
-        <span>Die Betty App-Familie</span>
+        <span>{isEn ? 'The Betty App Family' : 'Die Betty App-Familie'}</span>
       </div>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1A3533] tracking-tight mb-4" style="font-family: var(--font-heading);">
-        Für jeden Entwicklungsbereich die passende App
+        {isEn ? 'The Right App for Every Learning Milestone' : 'Für jeden Entwicklungsbereich die passende App'}
       </h2>
       <p class="text-base text-[#4B6E6A]">
-        Jede unserer Apps wurde gezielt für einen Lern- oder Konzentrationsbereich entwickelt. Mit durchdachter Didaktik, kindersicher und ohne Ablenkungen.
+        {isEn 
+          ? 'Every Betty app is purposefully designed for a key focus or learning area. Built with thoughtful pedagogy, safe for kids, and free from distractions.'
+          : 'Jede unserer Apps wurde gezielt für einen Lern- oder Konzentrationsbereich entwickelt. Mit durchdachter Didaktik, kindersicher und ohne Ablenkungen.'}
       </p>
     </div>
 
     <!-- App Cards 2x2 Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {APPS.map((app) => (
-        <AppCard app={app} />
+      {appList.map((app) => (
+        <AppCard app={app} lang={lang} />
       ))}
     </div>
 

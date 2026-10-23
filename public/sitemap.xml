@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Deutsch (Default) -->
   <url>
     <loc>https://lernmitbetty.de/</loc>
     <changefreq>weekly</changefreq>
@@ -9,6 +10,11 @@
     <loc>https://lernmitbetty.de/feedback/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lernmitbetty.de/admob/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lernmitbetty.de/datenschutz/</loc>
@@ -36,13 +42,25 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lernmitbetty.de/admob/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://lernmitbetty.de/impressum/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://lernmitbetty.de/en/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lernmitbetty.de/en/feedback/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lernmitbetty.de/en/admob/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

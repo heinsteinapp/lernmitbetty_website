@@ -1,5 +1,10 @@
 ---
-import { SAFETY_POINTS } from '../data/apps';
+interface Props {
+  lang?: 'de' | 'en';
+}
+
+const { lang = 'de' } = Astro.props;
+const isEn = lang === 'en';
 ---
 
 <section id="safety" class="py-16 sm:py-24 bg-white border-y border-[#58CBBF]/20 scroll-mt-20">
@@ -11,14 +16,16 @@ import { SAFETY_POINTS } from '../data/apps';
       <div class="lg:col-span-8 space-y-4">
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FDD5B4]/60 border border-[#E8935C]/30 text-xs font-bold text-[#E8935C]">
           <span>🛡️</span>
-          <span>Für Eltern & Erziehende</span>
+          <span>{isEn ? 'For Parents & Educators' : 'Für Eltern & Erziehende'}</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1A3533] tracking-tight" style="font-family: var(--font-heading);">
-          Das Betty-Sicherheitsversprechen:<br />
-          <span class="text-[#00897B]">Lernen ohne Risiko.</span>
+          {isEn ? 'The Betty Safety Promise:' : 'Das Betty-Sicherheitsversprechen:'}<br />
+          <span class="text-[#00897B]">{isEn ? 'Learning Without Risk.' : 'Lernen ohne Risiko.'}</span>
         </h2>
         <p class="text-base text-[#4B6E6A] leading-relaxed max-w-2xl">
-          Als Eltern möchten wir genau wissen, was auf den Bildschirmen unserer Kinder geschieht. Deshalb haben wir für alle Betty-Apps von Grund auf strenge Sicherheits- und Datenschutzprinzipien fest verankert.
+          {isEn 
+            ? "As parents, we want to know exactly what happens on our children's screens. That is why we embed strict privacy and child protection principles into every single Betty app right from the start."
+            : "Als Eltern möchten wir genau wissen, was auf den Bildschirmen unserer Kinder geschieht. Deshalb haben wir für alle Betty-Apps von Grund auf strenge Sicherheits- und Datenschutzprinzipien fest verankert."}
         </p>
       </div>
 
@@ -27,12 +34,12 @@ import { SAFETY_POINTS } from '../data/apps';
         <div class="relative w-48 sm:w-56 aspect-square rounded-3xl bg-white p-2 border-2 border-[#58CBBF]/30 shadow-md flex items-center justify-center overflow-hidden">
           <img 
             src="/images/mascot/betty_safety.png" 
-            alt="Betty mit Sicherheitsschild für Kinderschutz" 
+            alt={isEn ? "Betty with safety shield for child protection" : "Betty mit Sicherheitsschild für Kinderschutz"} 
             class="w-full h-full object-cover rounded-2xl"
             loading="lazy"
           />
           <div class="absolute bottom-2 bg-[#43A047] text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-            ✓ 100% Kindersicher
+            {isEn ? '✓ 100% Child-Safe' : '✓ 100% Kindersicher'}
           </div>
         </div>
       </div>
@@ -49,14 +56,16 @@ import { SAFETY_POINTS } from '../data/apps';
             📱
           </div>
           <h3 class="text-lg font-bold text-[#1A3533] mb-2" style="font-family: var(--font-heading);">
-            100 % Lokale Lernstände
+            {isEn ? '100% Local Learning Data' : '100 % Lokale Lernstände'}
           </h3>
           <p class="text-xs text-[#4B6E6A] leading-relaxed">
-            Lernstände, Vokabeln und Punkte bleiben ausschließlich lokal auf deinem Gerät gespeichert (ohne Benutzerkonto, ohne Cloud). Werbefreie Versionen laufen 100 % offline.
+            {isEn 
+              ? 'Learning progress, vocabularies, and high scores remain exclusively stored on your device (no user accounts, no cloud). Ad-free Pro versions work 100% offline.'
+              : 'Lernstände, Vokabeln und Punkte bleiben ausschließlich lokal auf deinem Gerät gespeichert (ohne Benutzerkonto, ohne Cloud). Werbefreie Versionen laufen 100 % offline.'}
           </p>
         </div>
         <div class="mt-4 pt-4 border-t border-[#58CBBF]/15 text-[11px] font-semibold text-[#00897B]">
-          Kein Konto nötig
+          {isEn ? 'No Account Needed' : 'Kein Konto nötig'}
         </div>
       </div>
 
@@ -67,14 +76,16 @@ import { SAFETY_POINTS } from '../data/apps';
             🛡️
           </div>
           <h3 class="text-lg font-bold text-[#1A3533] mb-2" style="font-family: var(--font-heading);">
-            COPPA & Familienprogramm
+            {isEn ? 'COPPA & Family Program' : 'COPPA & Familienprogramm'}
           </h3>
           <p class="text-xs text-[#4B6E6A] leading-relaxed">
-            Strikte Google Play Familienstandards: Kein Werbe-ID-Tracking, keine personalisierte Werbung. Bei Gratis-Apps mit AdMob greift striktes Kinderschutz-Rating G.
+            {isEn 
+              ? 'Strict compliance with Google Play Family standards: No advertising ID tracking, no personalized ads. Free apps with AdMob are strictly locked to child-safe Rating G.'
+              : 'Strikte Google Play Familienstandards: Kein Werbe-ID-Tracking, keine personalisierte Werbung. Bei Gratis-Apps mit AdMob greift striktes Kinderschutz-Rating G.'}
           </p>
         </div>
         <div class="mt-4 pt-4 border-t border-[#58CBBF]/15 text-[11px] font-semibold text-[#00897B]">
-          Garantierte Kindersicherheit
+          {isEn ? 'Guaranteed Child Safety' : 'Garantierte Kindersicherheit'}
         </div>
       </div>
 
@@ -85,14 +96,16 @@ import { SAFETY_POINTS } from '../data/apps';
             🧘
           </div>
           <h3 class="text-lg font-bold text-[#1A3533] mb-2" style="font-family: var(--font-heading);">
-            Ungestörtes Lernen
+            {isEn ? 'Undisturbed Focus' : 'Ungestörtes Lernen'}
           </h3>
           <p class="text-xs text-[#4B6E6A] leading-relaxed">
-            Niemals Vollbild-Unterbrechungen während einer laufenden Konzentrationsaufgabe oder eines Spiels. Voller Fokus auf das Wesentliche.
+            {isEn 
+              ? 'Never any full-screen popups or interstitial interruptions during active focus exercises or games. Pure concentration on what matters.'
+              : 'Niemals Vollbild-Unterbrechungen während einer laufenden Konzentrationsaufgabe oder eines Spiels. Voller Fokus auf das Wesentliche.'}
           </p>
         </div>
         <div class="mt-4 pt-4 border-t border-[#58CBBF]/15 text-[11px] font-semibold text-[#00897B]">
-          Keine Reizüberflutung
+          {isEn ? 'No Sensory Overload' : 'Keine Reizüberflutung'}
         </div>
       </div>
 
@@ -103,14 +116,16 @@ import { SAFETY_POINTS } from '../data/apps';
             🧡
           </div>
           <h3 class="text-lg font-bold text-[#1A3533] mb-2" style="font-family: var(--font-heading);">
-            Werte & Ermutigung
+            {isEn ? 'Encouraging Values' : 'Werte & Ermutigung'}
           </h3>
           <p class="text-xs text-[#4B6E6A] leading-relaxed">
-            Lernen soll Spaß machen und stärken! Betty belohnt jeden Versuch und jede Anstrengung mit Wärme, Geduld und positiver Bestärkung.
+            {isEn 
+              ? 'Learning should spark joy and build confidence! Betty rewards every attempt and effort with patience, warmth, and positive reinforcement.'
+              : 'Lernen soll Spaß machen und stärken! Betty belohnt jeden Versuch und jede Anstrengung mit Wärme, Geduld und positiver Bestärkung.'}
           </p>
         </div>
         <div class="mt-4 pt-4 border-t border-[#58CBBF]/15 text-[11px] font-semibold text-[#00897B]">
-          Freude am Fortschritt
+          {isEn ? 'Joy in Progress' : 'Freude am Fortschritt'}
         </div>
       </div>
 
@@ -120,10 +135,12 @@ import { SAFETY_POINTS } from '../data/apps';
     <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#B2EBE6]/30 via-white to-[#FDD5B4]/30 border border-[#58CBBF]/30 flex flex-col sm:flex-row items-center justify-between gap-6">
       <div class="space-y-1 text-center sm:text-left">
         <h4 class="text-base sm:text-lg font-bold text-[#1A3533]" style="font-family: var(--font-heading);">
-          Du möchtest mehr über unsere Datenschutzrichtlinien erfahren?
+          {isEn ? 'Want to learn more about our privacy standards?' : 'Du möchtest mehr über unsere Datenschutzrichtlinien erfahren?'}
         </h4>
         <p class="text-xs sm:text-sm text-[#4B6E6A]">
-          Lies unsere transparente Datenschutzerklärung für den Google Play Store und alle Betty-Apps.
+          {isEn 
+            ? 'Read our transparent privacy policies for the Google Play Store and all Betty apps.'
+            : 'Lies unsere transparente Datenschutzerklärung für den Google Play Store und alle Betty-Apps.'}
         </p>
       </div>
       <a 
@@ -131,7 +148,7 @@ import { SAFETY_POINTS } from '../data/apps';
         class="inline-flex items-center px-6 py-3 rounded-2xl bg-[#00897B] hover:bg-[#007064] text-white font-bold text-xs sm:text-sm shadow-md transition-all hover:-translate-y-0.5 whitespace-nowrap"
         style="font-family: var(--font-heading);"
       >
-        Datenschutzerklärung lesen →
+        {isEn ? 'Read Privacy Policy →' : 'Datenschutzerklärung lesen →'}
       </a>
     </div>
 

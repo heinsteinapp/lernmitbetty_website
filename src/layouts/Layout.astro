@@ -7,19 +7,35 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  lang?: 'de' | 'en';
 }
 
+const isEn = Astro.url.pathname.startsWith('/en');
+
 const {
-  title = "Lern mit Betty | Kindgerechte Lern- und Konzentrations-Apps",
-  description = "Entdecke Fokus mit Betty, Rechne mit Betty, Englisch mit Betty und Betty's Slice: Pädagogisch wertvolle, kindersichere Lern- und Geschicklichkeits-Apps für Kinder und Familien.",
-  image = "/images/mascot/betty_mascot_welcome.png"
+  title = isEn 
+    ? "Learn with Betty | Child-Friendly Learning & Focus Apps"
+    : "Lern mit Betty | Kindgerechte Lern- und Konzentrations-Apps",
+  description = isEn
+    ? "Discover Focus with Betty, Math with Betty, English with Betty and Betty's Slice: Safe, educational and encouraging learning apps for kids and families."
+    : "Entdecke Fokus mit Betty, Rechne mit Betty, Englisch mit Betty und Betty's Slice: Pädagogisch wertvolle, kindersichere Lern- und Geschicklichkeits-Apps für Kinder und Familien.",
+  image = "/images/mascot/betty_mascot_welcome.png",
+  lang = isEn ? 'en' : 'de'
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://lernmitbetty.de");
+const siteUrl = Astro.site || "https://lernmitbetty.de";
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+
+// Hreflang alternates
+const cleanPath = Astro.url.pathname.replace(/\/$/, '');
+const dePath = isEn ? (cleanPath.replace(/^\/en/, '') || '/') : (cleanPath || '/');
+const enPath = isEn ? (cleanPath || '/en') : (cleanPath === '' || cleanPath === '/' ? '/en' : `/en${cleanPath}`);
+const deUrl = new URL(dePath.endsWith('/') ? dePath : `${dePath}/`, siteUrl);
+const enUrl = new URL(enPath.endsWith('/') ? enPath : `${enPath}/`, siteUrl);
 ---
 
 <!doctype html>
-<html lang="de" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,6 +48,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://lernmitb
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" hreflang="de" href={deUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={deUrl} />
 
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website" />
@@ -39,15 +58,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://lernmitb
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(image, canonicalURL)} />
-    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'de_DE'} />
 
     <!-- Local Fonts (Fredoka & Nunito loaded locally in global.css, 100% DSGVO-konform) -->
   </head>
   <body class="min-h-screen flex flex-col bg-[#F0FCFB] text-[#1A3533] selection:bg-[#58CBBF]/30 selection:text-[#00897B]">
-    <Header />
+    <Header lang={lang} />
     <main class="flex-grow">
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

@@ -1,0 +1,115 @@
+import type { AppItem } from './apps';
+
+export const APPS_EN: AppItem[] = [
+  {
+    id: "fokus-mit-betty",
+    name: "Focus with Betty",
+    tagline: "Concentration, Mindfulness & Schulte Tables",
+    description: "Playfully boosts children's attention span and visual field – inspired by proven Schulte tables, Gorbov Red-Black exercises, and guided breathing pauses with Betty.",
+    targetAge: "Ages 6+",
+    category: "Focus & Concentration",
+    icon: "/images/apps/fokus_mit_betty.png",
+    highlights: [
+      "Schulte number tables (3×3 to 7×7) for expanding visual span",
+      "Gorbov Red-Black tables for peak concentration discipline",
+      "Guided breathing and relaxation moments with Betty",
+      "Distraction-free exercises without ad interruptions during practice"
+    ],
+    gradient: "from-teal-500 to-emerald-600",
+    badgeBg: "bg-teal-50 text-teal-800 border-teal-200",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.fokusmitbetty",
+    privacyUrl: "/datenschutz/fokus-mit-betty",
+    packageName: "com.heinstein.fokusmitbetty",
+    paidPackageName: "com.heinstein.fokusmitbettypaid",
+    isAvailable: false
+  },
+  {
+    id: "rechnen-mit-betty",
+    name: "Math with Betty",
+    tagline: "Playful Mental Math & Arithmetic Adventures",
+    description: "Turn numbers into best friends! Addition, subtraction, multiplication, and division: Together with Betty the poodle, kids build real math confidence.",
+    targetAge: "Preschool & Elementary",
+    category: "Math & Logic",
+    icon: "/images/apps/rechnen_mit_betty.png",
+    highlights: [
+      "All 4 basic operations (+, −, ×, ÷) structured step-by-step",
+      "Selectable number ranges from 10, 20, 100 up to 1000",
+      "Motivating bone-collecting system & streaks",
+      "Instant, encouraging, and child-friendly feedback"
+    ],
+    gradient: "from-orange-500 to-amber-600",
+    badgeBg: "bg-orange-50 text-orange-800 border-orange-200",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.rechnemitbetty",
+    privacyUrl: "/datenschutz/rechnen-mit-betty",
+    packageName: "com.heinstein.rechnemitbetty",
+    paidPackageName: "com.heinstein.rechnemitbettypaid",
+    isAvailable: true
+  },
+  {
+    id: "englisch-mit-betty",
+    name: "English with Betty",
+    tagline: "Vocabulary Trainer & Playful Language Discovery",
+    description: "The friendly, anxiety-free start into the English language. Featuring loving illustrations, native audio pronunciation, and delightful mini-puzzles.",
+    targetAge: "Elementary School (Ages 6+)",
+    category: "Language Learning",
+    icon: "/images/apps/englisch_mit_betty.png",
+    highlights: [
+      "Child-friendly worlds: Animals, Colors, Numbers & School",
+      "Crystal-clear native speaker audio pronunciation for every word",
+      "Smart repetition logic for long-term vocabulary retention",
+      "Stress-free learning at each child's own personal pace"
+    ],
+    gradient: "from-sky-500 to-blue-600",
+    badgeBg: "bg-sky-50 text-sky-800 border-sky-200",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.lernemitbetty",
+    privacyUrl: "/datenschutz/englisch-mit-betty",
+    packageName: "com.heinstein.lernemitbetty",
+    paidPackageName: "com.heinstein.lernemitbettypaid",
+    isAvailable: true
+  },
+  {
+    id: "betty-slice",
+    name: "Betty's Slice",
+    tagline: "Family Reaction & Dexterity Game with Paw Action",
+    description: "Quick paws wanted! A fast-paced, non-violent dexterity game for the whole family that sharpens hand-eye coordination with humor and fun.",
+    targetAge: "For the Whole Family (Ages 4+)",
+    category: "Dexterity & Arcade",
+    icon: "/images/apps/betty_slice.png",
+    highlights: [
+      "Intuitive swipe & touch controls for rapid reflexes",
+      "Cheerful, 100% non-violent family gaming atmosphere",
+      "Fun high-score chasing for parents and kids alike",
+      "No annoying paywalls or unfair in-app purchases"
+    ],
+    gradient: "from-amber-500 to-rose-500",
+    badgeBg: "bg-amber-50 text-amber-800 border-amber-200",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.bettyslice",
+    privacyUrl: "/datenschutz/betty-slice",
+    packageName: "com.heinstein.bettyslice",
+    paidPackageName: "com.heinstein.bettyslicepaid",
+    isAvailable: false
+  }
+];
+
+export const SAFETY_POINTS_EN = [
+  {
+    icon: "shield",
+    title: "100% Local Learning Data",
+    description: "All learning progress and high scores remain stored exclusively on your device – no user account, no cloud lock-in. Ad-free versions work 100% offline."
+  },
+  {
+    icon: "baby",
+    title: "Google Play Family Program & COPPA",
+    description: "Built strictly according to Google Play Family guidelines: No advertising ID tracking, no personalized ads, Rating G."
+  },
+  {
+    icon: "sparkles",
+    title: "Pedagogically Valuable",
+    description: "Designed to nurture self-confidence, curiosity, and focus – without sensory overload, sudden scares, or unfair pressure."
+  },
+  {
+    icon: "heart",
+    title: "Crafted with Love",
+    description: "Warm watercolor design, child-friendly typography, and Betty the poodle as a patient, encouraging companion."
+  }
+];
