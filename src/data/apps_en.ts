@@ -88,6 +88,50 @@ export const APPS_EN: AppItem[] = [
     packageName: "com.heinstein.bettyslice",
     paidPackageName: "com.heinstein.bettyslicepaid",
     isAvailable: false
+  },
+  {
+    id: "uhrzeit-mit-betty",
+    name: "What Time Is It, Betty?",
+    tagline: "Interactive Clock & Time Learning Adventure",
+    description: "Telling time made playful and easy! Featuring beautiful analog and digital dials, rotatable hands, 24-hour day/night system, and friendly voice readout.",
+    targetAge: "Preschool & Elementary (Ages 5–9)",
+    category: "Time & Clock Learning",
+    icon: "/images/apps/uhrzeit_mit_betty.png",
+    highlights: [
+      "Interactive clock face with freely draggable hour and minute hands",
+      "Step-by-step adventure path from full hours to minute precision",
+      "24-hour dual dial for intuitive day and night comprehension",
+      "Betty's encouraging voice reads aloud any set time on demand"
+    ],
+    gradient: "from-cyan-500 to-teal-600",
+    badgeBg: "bg-cyan-50 text-cyan-800 border-cyan-200",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=de.benjaminheinz.wiespaetistesbetty",
+    privacyUrl: "/datenschutz/uhrzeit-mit-betty",
+    packageName: "de.benjaminheinz.wiespaetistesbetty",
+    paidPackageName: "de.benjaminheinz.wiespaetistesbettypro",
+    isAvailable: false
+  },
+  {
+    id: "gassi-mit-betty",
+    name: "Walk with Betty: Number Line",
+    tagline: "Number Lines, Neighbors & Walkies with Betty",
+    description: "An exciting journey through number space! Leap across interactive number lines with Betty, master neighbor numbers, and fill your treasury with golden bones.",
+    targetAge: "Elementary School (Grades 1–4)",
+    category: "Math & Number Space",
+    icon: "/images/apps/gassi_mit_betty.png",
+    highlights: [
+      "Interactive number lines for ranges 0–10, 0–20, 0–100, and 0–1,000",
+      "Betty's leap trajectories visualize addition and subtraction steps",
+      "Neighbor number puzzles (predecessor and successor) solved easily",
+      "Betty's treasury with trophies, golden bone rewards, and achievements"
+    ],
+    gradient: "from-emerald-500 to-green-600",
+    badgeBg: "bg-emerald-50 text-emerald-800 border-emerald-200",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.gassimitbetty",
+    privacyUrl: "/datenschutz/gassi-mit-betty",
+    packageName: "com.heinstein.gassimitbetty",
+    paidPackageName: "com.heinstein.gassimitbettypro",
+    isAvailable: false
   }
 ];
 

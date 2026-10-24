@@ -110,6 +110,50 @@ export const APPS: AppItem[] = [
     packageName: "com.heinstein.bettyslice",
     paidPackageName: "com.heinstein.bettyslicepaid",
     isAvailable: false
+  },
+  {
+    id: "uhrzeit-mit-betty",
+    name: "Wie spät ist es, Betty?",
+    tagline: "Interaktive Lernuhr & Zeitgefühl verstehen",
+    description: "Macht das Uhrzeitlernen zum Kinderspiel! Mit liebevoll gestalteten analogen und digitalen Ziffernblättern, drehbaren Zeigern, 24-Stunden-System und gesprochener Uhrzeit.",
+    targetAge: "Vorschule & Grundschule (5–9 Jahre)",
+    category: "Uhrzeit & Didaktik",
+    icon: "/images/apps/uhrzeit_mit_betty.png",
+    highlights: [
+      "Interaktive Lernuhr mit frei drehbaren Stunden- und Minutenzeigern",
+      "Didaktischer Stufen-Lernpfad von vollen Stunden bis zur Minutengenauigkeit",
+      "24-Stunden-Ziffernblatt zum intuitiven Verstehen von Tag & Nacht",
+      "Bettys liebevolle Vorlesestimme liest jede Uhrzeit auf Knopfdruck vor"
+    ],
+    gradient: "from-cyan-500 to-teal-600",
+    badgeBg: "bg-cyan-50 text-cyan-800 border-cyan-200",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=de.benjaminheinz.wiespaetistesbetty",
+    privacyUrl: "/datenschutz/uhrzeit-mit-betty",
+    packageName: "de.benjaminheinz.wiespaetistesbetty",
+    paidPackageName: "de.benjaminheinz.wiespaetistesbettypro",
+    isAvailable: false
+  },
+  {
+    id: "gassi-mit-betty",
+    name: "Gassi mit Betty: Zahlenstrahl",
+    tagline: "Zahlenstrahl, Nachbarzahlen & Bettys Spaziergang",
+    description: "Auf Entdeckungsreise durch den Zahlenraum! Mit Betty hüpfen Kinder über den interaktiven Zahlenstrahl, lösen Nachbarzahlen-Rätsel und füllen ihre Schatzkammer mit goldenen Knochen.",
+    targetAge: "Grundschule (1.–4. Klasse)",
+    category: "Mathematik & Zahlenraum",
+    icon: "/images/apps/gassi_mit_betty.png",
+    highlights: [
+      "Interaktiver Zahlenstrahl für Zahlenräume 0–10, 0–20, 0–100 und 0–1.000",
+      "Bettys Sprung-Trajektorien visualisieren Plus- und Minus-Schritte",
+      "Nachbarzahlen-Rätsel mit Vorgänger und Nachfolger kinderleicht knacken",
+      "Bettys Schatzkammer mit Trophäen, Knochen-Belohnungen und Erfolgen"
+    ],
+    gradient: "from-emerald-500 to-green-600",
+    badgeBg: "bg-emerald-50 text-emerald-800 border-emerald-200",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.heinstein.gassimitbetty",
+    privacyUrl: "/datenschutz/gassi-mit-betty",
+    packageName: "com.heinstein.gassimitbetty",
+    paidPackageName: "com.heinstein.gassimitbettypro",
+    isAvailable: false
   }
 ];
 
